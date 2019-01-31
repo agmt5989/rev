@@ -5,9 +5,9 @@ var express = require('express')
 var connections = []
   , votes = {yes: 0, no: 0};
 
-app.engine('jade', require('jade').__express) //__
-
-app.set('view engine', 'jade');
+// View Engine
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
 
 app.use(sse);
 app.use(express.static(path.join(__dirname, 'public')));
