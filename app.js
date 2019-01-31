@@ -10,6 +10,7 @@ app.engine('jade', require('jade').__express) //__
 app.set('view engine', 'jade');
 
 app.use(sse);
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', function(req, res) {
   res.render('vote')
