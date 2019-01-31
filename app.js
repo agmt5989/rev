@@ -9,7 +9,7 @@ var connections = []
 
 // View Engine
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'ejs');
+app.set('view engine', 'jade');
 
 app.use(sse);
 app.use(express.static(path.join(__dirname, 'public')));
